@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-configuration PUBLIC  
+ "-//Hibernate/Hibernate configuration DTD 5.3//EN"  
+ "http://hibernate.sourceforge.net/hibernate-configuration-5.3.dtd">
+ <hibernate-configuration>
+     <session-factory>
+         <property name="hbm2ddl.auto">update</property>
+         <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property> <!-- Fixed typo in 'dialect' property -->
+         <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/project</property> <!-- Fixed property name to 'hibernate.connection.url' -->
+         <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property> <!-- Fixed property name to 'hibernate.connection.driver_class' -->
+         <property name="hibernate.connection.username">root</property> <!-- Fixed property name to 'hibernate.connection.username' -->
+         <property name="hibernate.connection.password">abc123</property> <!-- Fixed property name to 'hibernate.connection.password' -->
+         <property name="hibernate.show_sql">true</property> <!-- Changed 'show_url' to 'show_sql' -->
+         <mapping class="com.entities.Note"></mapping>
+         <mapping class="com.entities.User"></mapping>
+     </session-factory>
+ </hibernate-configuration>
